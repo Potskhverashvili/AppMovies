@@ -5,6 +5,6 @@ import com.example.appmovies.databinding.FragmentSignUpBinding
 
 class SignUpFragment : BaseFragment<FragmentSignUpBinding>(FragmentSignUpBinding::inflate) {
     override fun viewCreated() {
-        TODO("Not yet implemented")
+
     }
 }
