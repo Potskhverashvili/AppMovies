@@ -7,7 +7,41 @@
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.appmovies.presentation.auth.signup.SignUpFragment"
+        android:name="com.example.appmovies.presentation.auth.signup.SignupFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_signUpFragment_to_containerFragment"
+            app:destination="@id/containerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.appmovies.presentation.auth.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_containerFragment"
+            app:destination="@id/containerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/containerFragment"
+        android:name="com.example.appmovies.presentation.containerFragment.ContainerFragment"
+        android:label="ContainerFragment"
+        tools:layout="@layout/fragment_container"/>
 </navigation>
