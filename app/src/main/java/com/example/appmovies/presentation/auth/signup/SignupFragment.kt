@@ -14,6 +14,10 @@ class SignupFragment : BaseFragment<FragmentSignupBinding>(FragmentSignupBinding
         binding.logInTv.setOnClickListener {
             goToLogInPage()
         }
+
+        binding.signUpBtn.setOnClickListener{
+            findNavController().navigate(SignupFragmentDirections.actionSignUpFragmentToContainerFragment())
+        }
     }
 
 
