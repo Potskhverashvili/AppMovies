@@ -38,10 +38,35 @@
         <action
             android:id="@+id/action_loginFragment_to_containerFragment"
             app:destination="@id/containerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_passwordRecoveryFragment"
+            app:destination="@id/passwordRecoveryFragment" />
     </fragment>
     <fragment
         android:id="@+id/containerFragment"
         android:name="com.example.appmovies.presentation.containerFragment.ContainerFragment"
         android:label="ContainerFragment"
         tools:layout="@layout/fragment_container" />
+    <fragment
+        android:id="@+id/passwordRecoveryFragment"
+        android:name="com.example.appmovies.presentation.auth.passwordRecovery.PasswordRecoveryFragment"
+        android:label="PasswordRecoveryFragment"
+        tools:layout="@layout/fragment_password_recovery">
+        <action
+            android:id="@+id/action_passwordRecoveryFragment_to_confirmEmailFragment"
+            app:destination="@id/confirmEmailFragment"
+            app:popUpTo="@id/confirmEmailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmEmailFragment"
+        android:name="com.example.appmovies.presentation.auth.passwordRecovery.ConfirmEmailFragment"
+        android:label="ConfirmEmailFragment"
+        tools:layout="@layout/fragment_password_recovery">
+        <action
+            android:id="@+id/action_confirmEmailFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

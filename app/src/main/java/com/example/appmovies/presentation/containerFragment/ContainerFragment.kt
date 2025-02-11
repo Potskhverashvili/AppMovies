@@ -16,7 +16,6 @@ class ContainerFragment :
         val navHostFragment =
             childFragmentManager.findFragmentById(R.id.fragmentContainerView2) as? NavHostFragment
                 ?: return
-
         binding.bottomNavigation.setupWithNavController(navHostFragment.navController)
     }
 }
